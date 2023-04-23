@@ -11,6 +11,8 @@ import { CarouselModule } from './carousel/carousel.module';
 import { ShellBoxAboutComponent } from './shell-box-about/shell-box-about.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { GoogleMapsComponent } from './google-maps/google-maps.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,16 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     ShellBoxAboutComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
+    GoogleMapsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    CarouselModule
+    CarouselModule,
+    GoogleMapsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
