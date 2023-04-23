@@ -1,0 +1,24 @@
+.card-principal-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.card-mat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  -webkit-box-shadow: 6px 11px 28px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 11px 28px 0px rgba(0,0,0,0.75);
+  box-shadow: 6px 11px 28px 0px rgba(0,0,0,0.75);
+}
+
+.mat-content {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+  align-items: center;
+}

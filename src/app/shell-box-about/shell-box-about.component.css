@@ -1,0 +1,53 @@
+.card {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.card-container {
+  max-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 30px;
+  -webkit-box-shadow: 6px 11px 28px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 11px 28px 0px rgba(0,0,0,0.75);
+  box-shadow: 6px 11px 28px 0px rgba(0,0,0,0.75);
+}
+
+.image-card {
+  background-image: url('https://www.idinheiro.com.br/wp-content/uploads/2021/10/shell-box.png');
+  background-size: cover;
+}
+
+.card-principal-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.card-mat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  -webkit-box-shadow: 6px 11px 28px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 11px 28px 0px rgba(0,0,0,0.75);
+  box-shadow: 6px 11px 28px 0px rgba(0,0,0,0.75);
+}
+
+.mat-card-action {
+  margin-top: 48px;
+}
+
+.mat-card-container {
+  height: fit-content;
+}
+
+.btn-center {
+  margin-left: -133px;
+}
