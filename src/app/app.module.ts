@@ -5,14 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './shared/angular-material/angular-material.module';
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
-import { CarouselModule } from './carousel/carousel.module';
-import { ShellBoxAboutComponent } from './shell-box-about/shell-box-about.component';
-import { AboutComponent } from './about/about.component';
-import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+import { CarouselModule } from './components/carousel/carousel.module';
+import { ShellBoxAboutComponent } from './components/shell-box-about/shell-box-about.component';
+import { AboutComponent } from './components/about/about.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { GoogleMapsModule } from '@angular/google-maps';
-import { GoogleMapsComponent } from './google-maps/google-maps.component';
+import { GoogleMapsComponent } from './components/google-maps/google-maps.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { GoogleMapsComponent } from './google-maps/google-maps.component';
     AboutComponent,
     FooterComponent,
     GoogleMapsComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +34,8 @@ import { GoogleMapsComponent } from './google-maps/google-maps.component';
     AngularMaterialModule,
     CarouselModule,
     GoogleMapsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
