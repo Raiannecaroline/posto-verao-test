@@ -11,38 +11,28 @@
     <a mat-button routerLink="">Home</a>
     <a
       mat-button
-      routerLink="/services"
-      routerLinkActive="activebutton"
-      ariaCurrentWhenActive="page"
+      (click)="scrollShelBox('shellBox')"
       >Shell Box</a
     >
     <a
       mat-button
-      routerLink="/about"
-      routerLinkActive="activebutton"
-      ariaCurrentWhenActive="page"
+      (click)="scrollAbout('about')"
       >Sobre</a
     >
     <a
       mat-button
-      routerLink="/location"
-      routerLinkActive="activebutton"
-      ariaCurrentWhenActive="page"
+      (click)="scrollLocation('location')"
       >Localização</a
     >
     <a
       mat-button
-      routerLink="/contact"
-      routerLinkActive="activebutton"
-      ariaCurrentWhenActive="page"
+      (click)="scrollContact('contact')"
       >Contatos</a
     >
     <a
       mat-raised-button
       color="accent"
       routerLink="/login"
-      routerLinkActive="activebutton"
-      ariaCurrentWhenActive="page"
       >Login</a
     >
   </nav>

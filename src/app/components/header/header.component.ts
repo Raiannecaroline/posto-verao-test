@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private viewportScroller: ViewportScroller,
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  scrollShelBox(elementId: string): void {
+    this.viewportScroller.scrollToAnchor(elementId);
+  }
+
+  scrollAbout(elementId: string): void {
+    this.viewportScroller.scrollToAnchor(elementId);
+  }
+
+  scrollLocation(elementId: string): void {
+    this.viewportScroller.scrollToAnchor(elementId);
+  }
+
+  scrollContact(elementId: string): void {
+    this.viewportScroller.scrollToAnchor(elementId);
   }
 
 }

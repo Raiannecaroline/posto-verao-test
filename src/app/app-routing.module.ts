@@ -8,6 +8,7 @@ import { GoogleMapsComponent } from './components/google-maps/google-maps.compon
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 const routes: Routes = [
   {
@@ -45,7 +46,13 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes, {
+      useHash: true,
+      anchorScrolling: 'enabled'
+    }),
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
