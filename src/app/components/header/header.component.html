@@ -1,12 +1,49 @@
 <mat-toolbar color="primary" class="mat-elevation-z8">
-  <img src="https://redeverao.com.br/logofundotransparente.png" alt="Rede Verão" width="100px">
+  <img
+    src="https://redeverao.com.br/logofundotransparente.png"
+    alt="Rede Verão"
+    width="100px"
+  />
 
-   <div class="spacer"></div>
+  <div class="spacer"></div>
 
-  <a mat-button routerLink="">Home</a>
-  <a mat-button routerLink="/services">Shell Box</a>
-  <a mat-button routerLink="/about">Sobre</a>
-  <a mat-button routerLink="/location">Localização</a>
-  <a mat-button routerLink="/contact">Contatos</a>
-  <a mat-raised-button color="accent" routerLink="/login">Login</a>
+  <nav>
+    <a mat-button routerLink="">Home</a>
+    <a
+      mat-button
+      routerLink="/services"
+      routerLinkActive="activebutton"
+      ariaCurrentWhenActive="page"
+      >Shell Box</a
+    >
+    <a
+      mat-button
+      routerLink="/about"
+      routerLinkActive="activebutton"
+      ariaCurrentWhenActive="page"
+      >Sobre</a
+    >
+    <a
+      mat-button
+      routerLink="/location"
+      routerLinkActive="activebutton"
+      ariaCurrentWhenActive="page"
+      >Localização</a
+    >
+    <a
+      mat-button
+      routerLink="/contact"
+      routerLinkActive="activebutton"
+      ariaCurrentWhenActive="page"
+      >Contatos</a
+    >
+    <a
+      mat-raised-button
+      color="accent"
+      routerLink="/login"
+      routerLinkActive="activebutton"
+      ariaCurrentWhenActive="page"
+      >Login</a
+    >
+  </nav>
 </mat-toolbar>

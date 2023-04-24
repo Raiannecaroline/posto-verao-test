@@ -1,29 +1,29 @@
 <mat-card>
   <mat-card-content>
     <div class="header">
-      <P>Sign Into Your Account </P>
+      <P>Entre na sua conta </P>
     </div>
     <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
       <div class="emailInput">
         <mat-form-field class="full-width" appearance="outline">
-          <mat-label>Email</mat-label>
+          <mat-label>E-mail</mat-label>
           <input
             formControlName="email"
             matInput
-            placeholder="Enter email address" required
+            placeholder="email@exemplo.com" required
           />
           <mat-error *ngIf="!loginForm.controls['email'].valid">
-              Email is required
+              O E-mail é obrigatório!
             </mat-error>
         </mat-form-field>
       </div>
 
       <div>
         <span>
-          <a class="text-link" class="aLink" routerLink="/auth/forgot-password">Forgot Password?</a>
+          <a class="text-link" class="aLink" routerLink="/auth/forgot-password">Esqueceu a sua senha?</a>
         </span>
         <mat-form-field class="full-width" appearance="outline">
-          <mat-label>Password</mat-label>
+          <mat-label>Senha</mat-label>
           <input formControlName="password" matInput [type]=" hide ? 'password' : 'text'" required />
           <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'"
           [attr.aria-pressed]="hide">
@@ -32,7 +32,7 @@
           </mat-icon>
       </button>
       <mat-error *ngIf="!loginForm.controls['password'].valid">
-          Password is required
+          A senha é obrigatória!
         </mat-error>
       </mat-form-field>
       </div>
@@ -40,7 +40,7 @@
     </form>
 
     <div class="button-row">
-      <p>Create New Account</p>
+      <p>Crie uma nova conta</p>
     </div>
   </mat-card-content>
 </mat-card>
