@@ -12,7 +12,3 @@
 
 
 https://user-images.githubusercontent.com/69178860/234029640-2ce893e3-943e-4d5f-b1da-e5f5d6613d14.mp4
-
-
-## Deploy Projeto
-
