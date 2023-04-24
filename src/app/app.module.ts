@@ -16,6 +16,8 @@ import { GoogleMapsComponent } from './components/google-maps/google-maps.compon
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { FakeBackendProvider } from './fake-backend.interceptor';
 
 @NgModule({
   declarations: [
@@ -38,8 +40,9 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     BrowserModule,
     RouterModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FakeBackendProvider],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
