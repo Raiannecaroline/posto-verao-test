@@ -1,46 +1,48 @@
-<mat-card>
-  <mat-card-content>
-    <div class="header">
-      <P>Entre na sua conta </P>
-    </div>
-    <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
-      <div class="emailInput">
-        <mat-form-field class="full-width" appearance="outline">
-          <mat-label>E-mail</mat-label>
-          <input
-            formControlName="email"
-            matInput
-            placeholder="email@exemplo.com" required
-          />
-          <mat-error *ngIf="!loginForm.controls['email'].valid">
-              O E-mail é obrigatório!
-            </mat-error>
+<div class="login-card">
+  <mat-card class="card-container">
+    <mat-card-content>
+      <div class="header">
+        <P>Entre na sua conta </P>
+      </div>
+      <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
+        <div class="emailInput">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input
+              formControlName="email"
+              matInput
+              placeholder="email@exemplo.com" required
+            />
+            <mat-error *ngIf="!loginForm.controls['email'].valid">
+                O E-mail é obrigatório!
+              </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <span>
+            <a class="text-link" class="aLink" routerLink="/auth/forgot-password">Esqueceu a sua senha?</a>
+          </span>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Senha</mat-label>
+            <input formControlName="password" matInput [type]=" hide ? 'password' : 'text'" required />
+            <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>
+                {{hide ? 'visibility_off' : 'visibility'}}
+            </mat-icon>
+        </button>
+        <mat-error *ngIf="!loginForm.controls['password'].valid">
+            A senha é obrigatória!
+          </mat-error>
         </mat-form-field>
-      </div>
+        </div>
+        <button mat-flat-button color="primary">Login</button>
+      </form>
 
-      <div>
-        <span>
-          <a class="text-link" class="aLink" routerLink="/auth/forgot-password">Esqueceu a sua senha?</a>
-        </span>
-        <mat-form-field class="full-width" appearance="outline">
-          <mat-label>Senha</mat-label>
-          <input formControlName="password" matInput [type]=" hide ? 'password' : 'text'" required />
-          <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'"
-          [attr.aria-pressed]="hide">
-          <mat-icon>
-              {{hide ? 'visibility_off' : 'visibility'}}
-          </mat-icon>
-      </button>
-      <mat-error *ngIf="!loginForm.controls['password'].valid">
-          A senha é obrigatória!
-        </mat-error>
-      </mat-form-field>
+      <div class="button-row">
+        <p>Crie uma nova conta</p>
       </div>
-      <button mat-flat-button color="primary">Login</button>
-    </form>
-
-    <div class="button-row">
-      <p>Crie uma nova conta</p>
-    </div>
-  </mat-card-content>
-</mat-card>
+    </mat-card-content>
+  </mat-card>
+</div>
